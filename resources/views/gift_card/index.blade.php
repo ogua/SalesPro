@@ -116,7 +116,7 @@
               <div class="gift-card" style="margin: 0 auto; max-width: 350px; position: relative; color:#fff;">
                 <img src="{{url('public/images/gift_card/back.png')}}" width="350" height="200">
                 <div class="site-title" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">@if($general_setting->site_logo)
-                  <img src="{{url('public/logo', $general_setting->site_logo)}}" height="38px" width="38px">&nbsp;
+                  <img src="{{asset('logo/'.$general_setting->site_logo)}}" height="38px" width="38px">&nbsp;
                   <span style="font-size: 25px;">@endif{{$general_setting->site_title}}</span>
                 </div>
               </div>

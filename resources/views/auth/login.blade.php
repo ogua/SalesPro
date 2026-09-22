@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
     <link rel="manifest" href="{{url('manifest.json')}}">
-    <link rel="icon" type="image/png" href="{{url('public/logo', $general_setting->site_logo)}}" />
+    <link rel="icon" type="image/png" href="{{asset('logo/'.$general_setting->site_logo)}}" />
     <!-- Bootstrap CSS-->
     <link rel="stylesheet" href="<?php echo asset('vendor/bootstrap/css/bootstrap.min.css') ?>" type="text/css">
     <!-- Google fonts - Roboto -->
@@ -25,7 +25,7 @@
           <div class="form-inner">
             <div class="logo">
                 @if($general_setting->site_logo)
-                <img src="{{url('public/logo', $general_setting->site_logo)}}" width="110">
+                <img src="{{asset('logo/'.$general_setting->site_logo)}}" width="110">
                 @else
                 <span>{{$general_setting->site_title}}</span>
                 @endif

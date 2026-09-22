@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" type="image/png" href="{{url('public/logo', $general_setting->site_logo)}}" />
+    <link rel="icon" type="image/png" href="{{asset('logo/'.$general_setting->site_logo)}}" />
     <title>{{$general_setting->site_title}}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -95,7 +95,7 @@
     <div id="receipt-data">
         <div class="centered">
             @if($general_setting->site_logo)
-                <img src="{{url('public/logo', $general_setting->site_logo)}}" height="42" width="50" style="margin:10px 0;filter: brightness(0);">
+                <img src="{{asset('logo/'.$general_setting->site_logo)}}" height="42" width="50" style="margin:10px 0;filter: brightness(0);">
             @endif
             
             <h2>{{$lims_biller_data->company_name}}</h2>
@@ -211,6 +211,7 @@
                 </tr>                
                 @endforeach
                 <tr><td class="centered" colspan="3">{{trans('file.Thank you for shopping with us. Please come again')}}</td></tr>
+                <tr><td class="centered" colspan="3"><strong>Goods Sold Are Not Returnable</strong></td></tr>
                 <tr>
                     <td class="centered" colspan="3">
                     <?php echo '<img style="margin-top:10px;" src="data:image/png;base64,' . DNS1D::getBarcodePNG($lims_sale_data->reference_no, 'C128') . '" width="300" alt="barcode"   />';?>

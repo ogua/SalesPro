@@ -4298,6 +4298,68 @@ ALTER TABLE `purchases`
 --
 ALTER TABLE `sales`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=706;
+--
+-- Primary keys and AUTO_INCREMENT for `id` columns missing from the dump
+--
+ALTER TABLE `accounts` MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `adjustments` MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `attendances` MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `billers` MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `brands` MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `cash_registers` MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `coupons` MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `currencies` MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `customers` MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `customer_groups` MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `custom_fields` ADD PRIMARY KEY (`id`), MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `deliveries` ADD PRIMARY KEY (`id`), MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `departments` ADD PRIMARY KEY (`id`), MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `deposits` ADD PRIMARY KEY (`id`), MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `discounts` ADD PRIMARY KEY (`id`), MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `discount_plans` ADD PRIMARY KEY (`id`), MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `discount_plan_customers` ADD PRIMARY KEY (`id`), MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `discount_plan_discounts` ADD PRIMARY KEY (`id`), MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `dso_alerts` ADD PRIMARY KEY (`id`), MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `employees` ADD PRIMARY KEY (`id`), MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `expenses` ADD PRIMARY KEY (`id`), MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `expense_categories` ADD PRIMARY KEY (`id`), MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `failed_jobs` ADD PRIMARY KEY (`id`), MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `general_settings` ADD PRIMARY KEY (`id`), MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `holidays` ADD PRIMARY KEY (`id`), MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `hrm_settings` ADD PRIMARY KEY (`id`), MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `languages` ADD PRIMARY KEY (`id`), MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `mail_settings` ADD PRIMARY KEY (`id`), MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `migrations` ADD PRIMARY KEY (`id`), MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `money_transfers` ADD PRIMARY KEY (`id`), MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `payment_with_cheque` ADD PRIMARY KEY (`id`), MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `payment_with_credit_card` ADD PRIMARY KEY (`id`), MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `payment_with_paypal` ADD PRIMARY KEY (`id`), MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `payrolls` ADD PRIMARY KEY (`id`), MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `permissions` ADD PRIMARY KEY (`id`), MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `pos_setting` ADD PRIMARY KEY (`id`), MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `products` ADD PRIMARY KEY (`id`), MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `product_adjustments` ADD PRIMARY KEY (`id`), MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `product_batches` ADD PRIMARY KEY (`id`), MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `product_quotation` ADD PRIMARY KEY (`id`), MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `product_returns` ADD PRIMARY KEY (`id`), MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `product_transfer` ADD PRIMARY KEY (`id`), MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `product_variants` ADD PRIMARY KEY (`id`), MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `product_warehouse` ADD PRIMARY KEY (`id`), MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `purchase_product_return` ADD PRIMARY KEY (`id`), MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `quotations` ADD PRIMARY KEY (`id`), MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `returns` ADD PRIMARY KEY (`id`), MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `return_purchases` ADD PRIMARY KEY (`id`), MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `reward_point_settings` ADD PRIMARY KEY (`id`), MODIFY `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `roles` ADD PRIMARY KEY (`id`), MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `stock_counts` ADD PRIMARY KEY (`id`), MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `suppliers` ADD PRIMARY KEY (`id`), MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `taxes` ADD PRIMARY KEY (`id`), MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `transfers` ADD PRIMARY KEY (`id`), MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `units` ADD PRIMARY KEY (`id`), MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `users` ADD PRIMARY KEY (`id`), MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `variants` ADD PRIMARY KEY (`id`), MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `warehouses` ADD PRIMARY KEY (`id`), MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

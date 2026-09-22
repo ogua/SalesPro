@@ -61,7 +61,7 @@ class SettingController extends Controller
         $data = $request->except('site_logo');
         //return $data;
         //writting timezone info in .env file
-        $path = '.env';
+        $path = base_path('.env');
         $searchArray = array('APP_TIMEZONE='.env('APP_TIMEZONE'));
         $replaceArray = array('APP_TIMEZONE='.$data['timezone']);
 
@@ -86,7 +86,7 @@ class SettingController extends Controller
         if ($logo) {
             $ext = pathinfo($logo->getClientOriginalName(), PATHINFO_EXTENSION);
             $logoName = date("Ymdhis") . '.' . $ext;
-            $logo->move('public/logo', $logoName);
+            $logo->move(public_path('logo'), $logoName);
             $general_setting->site_logo = $logoName;
         }
         $general_setting->save();
@@ -225,7 +225,7 @@ class SettingController extends Controller
 
         $data = $request->all();
         //writting mail info in .env file
-        $path = '.env';
+        $path = base_path('.env');
         $searchArray = array('MAIL_HOST="'.env('MAIL_HOST').'"', 'MAIL_PORT='.env('MAIL_PORT'), 'MAIL_FROM_ADDRESS="'.env('MAIL_FROM_ADDRESS').'"', 'MAIL_FROM_NAME="'.env('MAIL_FROM_NAME').'"', 'MAIL_USERNAME="'.env('MAIL_USERNAME').'"', 'MAIL_PASSWORD="'.env('MAIL_PASSWORD').'"', 'MAIL_ENCRYPTION="'.env('MAIL_ENCRYPTION').'"');
         //return $searchArray;
 
@@ -248,7 +248,7 @@ class SettingController extends Controller
         
         $data = $request->all();
         //writting bulksms info in .env file
-        $path = '.env';
+        $path = base_path('.env');
         if($data['gateway'] == 'twilio'){
             $searchArray = array('SMS_GATEWAY='.env('SMS_GATEWAY'), 'ACCOUNT_SID='.env('ACCOUNT_SID'), 'AUTH_TOKEN='.env('AUTH_TOKEN'), 'Twilio_Number='.env('Twilio_Number') );
 
@@ -346,7 +346,7 @@ class SettingController extends Controller
 
     	$data = $request->all();
         //writting paypal info in .env file
-        $path = '.env';
+        $path = base_path('.env');
         $searchArray = array('PAYPAL_LIVE_API_USERNAME='.env('PAYPAL_LIVE_API_USERNAME'), 'PAYPAL_LIVE_API_PASSWORD='.env('PAYPAL_LIVE_API_PASSWORD'), 'PAYPAL_LIVE_API_SECRET='.env('PAYPAL_LIVE_API_SECRET') );
 
         $replaceArray = array('PAYPAL_LIVE_API_USERNAME='.$data['paypal_username'], 'PAYPAL_LIVE_API_PASSWORD='.$data['paypal_password'], 'PAYPAL_LIVE_API_SECRET='.$data['paypal_signature'] );

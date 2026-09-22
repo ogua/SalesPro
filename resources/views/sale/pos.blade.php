@@ -14,7 +14,7 @@
 <nav class="side-navbar shrink">
     <span class="brand-big">
         @if($general_setting->site_logo)
-        <a href="{{url('/')}}"><img src="{{url('public/logo', $general_setting->site_logo)}}" width="115"></a>
+        <a href="{{url('/')}}"><img src="{{asset('logo/'.$general_setting->site_logo)}}" width="115"></a>
         @else
         <a href="{{url('/')}}"><h1 class="d-inline">{{$general_setting->site_title}}</h1></a>
         @endif
